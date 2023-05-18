@@ -9,7 +9,8 @@ CREATE TABLE IF NOT EXISTS "special" (
     "rarity" DOUBLE PRECISION NOT NULL,
     "democracy_card" VARCHAR(200) NOT NULL,
     "dictatorship_card" VARCHAR(200) NOT NULL,
-    "union_card" VARCHAR(200) NOT NULL
+    "union_card" VARCHAR(200) NOT NULL,
+    "member_card" VARCHAR(200) NOT NULL
 );
 COMMENT ON COLUMN "special"."catch_phrase" IS 'Sentence sent in bonus when someone catches a special card';
 COMMENT ON COLUMN "special"."rarity" IS 'Value between 0 and 1, chances of using this special background.';;

@@ -18,6 +18,7 @@ from signal import SIGTERM
 from discord.utils import setup_logging
 from discord.ext.commands import when_mentioned_or
 
+
 from ballsdex import __version__ as bot_version
 from ballsdex.settings import settings, read_settings, write_default_settings, update_settings
 from ballsdex.core.bot import BallsDexBot

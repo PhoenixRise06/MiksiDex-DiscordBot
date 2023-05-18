@@ -117,6 +117,12 @@ class SpecialResource(Model):
             display=displays.Image(width="40"),
             input_=inputs.Image(upload=upload, null=True),
         ),
+        Field(
+            name="member_card",
+            label="Member card",
+            display=displays.Image(width="40"),
+            input_=inputs.Image(upload=upload, null=True),
+        ),
         "emoji",
     ]
 

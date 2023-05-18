@@ -42,13 +42,21 @@ def draw_card(ball_instance: "BallInstance"):
         ball_health = (131, 98, 240, 255)
     elif ball.regime == Regime.UNION:
         image = Image.open(str(SOURCES_PATH / "union.png"))
+    elif ball.regime == Regime.MEMBER:
+        image = Image.open(str(SOURCES_PATH / "member.png"))
     else:
         raise RuntimeError(f"Regime unknown: {ball.regime}")
 
-    if ball.economy == Economy.CAPITALIST:
-        icon = Image.open(str(SOURCES_PATH / "capitalist.png"))
-    elif ball.economy == Economy.COMMUNIST or ball.economy == Economy.ANARCHY:
-        icon = Image.open(str(SOURCES_PATH / "communist.png"))
+    if ball.economy == Economy.AHOE:
+        icon = Image.open(str(SOURCES_PATH / "ahoe.png"))
+    elif ball.economy == Economy.AFOA:
+        icon = Image.open(str(SOURCES_PATH / "afoa.png"))
+    elif ball.economy == Economy.AFOS:
+        icon = Image.open(str(SOURCES_PATH / "afos.png"))
+    elif ball.economy == Economy.AFOE:
+        icon = Image.open(str(SOURCES_PATH / "afoe.png"))
+    elif ball.economy == Economy.LEGION:
+        icon = Image.open(str(SOURCES_PATH / "legion.png"))
     else:
         raise RuntimeError(f"Economy unknown: {ball.economy}")
 
@@ -91,7 +99,7 @@ def draw_card(ball_instance: "BallInstance"):
         (30, 1870),
         # Modifying the line below is breaking the licence as you are removing credits
         # If you don't want to receive a DMCA, just don't
-        "Created by El Laggron\n" f"Artwork author: {ball.credits}",
+        "Created by El Laggron\nModded by Phoenix\n" f"Artwork author: {ball.credits}",
         font=credits_font,
         fill=(0, 0, 0, 255),
         stroke_width=0,

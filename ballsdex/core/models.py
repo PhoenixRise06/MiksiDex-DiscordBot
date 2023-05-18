@@ -62,12 +62,15 @@ class Regime(IntEnum):
     DEMOCRACY = 1
     DICTATORSHIP = 2
     UNION = 3
+    MEMBER = 4
 
 
 class Economy(IntEnum):
-    CAPITALIST = 1
-    COMMUNIST = 2
-    ANARCHY = 3
+    AHOE = 1
+    AFOA = 2
+    AFOS = 3
+    AFOE = 4
+    LEGION = 5
 
 
 class Special(models.Model):
@@ -86,6 +89,7 @@ class Special(models.Model):
     democracy_card = fields.CharField(max_length=200)
     dictatorship_card = fields.CharField(max_length=200)
     union_card = fields.CharField(max_length=200)
+    member_card = fields.CharField(max_length=200)
     emoji = fields.CharField(
         max_length=20,
         description="Either a unicode character or a discord emoji ID",
@@ -102,6 +106,8 @@ class Special(models.Model):
             return self.dictatorship_card
         elif regime == Regime.UNION:
             return self.union_card
+        elif regime == Regime.MEMBER:
+            return self.member_card
         else:
             return None
 
@@ -115,7 +121,7 @@ class Ball(models.Model):
         description="Additional possible names for catching this ball, separated by semicolons",
     )
     regime = fields.IntEnumField(Regime, description="Political regime of this country")
-    economy = fields.IntEnumField(Economy, description="Economical regime of this country")
+    economy = fields.IntEnumField(Economy, description="The economy in which this ball exists")
     health = fields.IntField(description="Ball health stat")
     attack = fields.IntField(description="Ball attack stat")
     rarity = fields.FloatField(description="Rarity of this ball")

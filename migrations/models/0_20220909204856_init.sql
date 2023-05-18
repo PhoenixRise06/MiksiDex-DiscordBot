@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS "ball" (
     "capacity_logic" JSONB NOT NULL
 );
 COMMENT ON COLUMN "ball"."regime" IS 'Political regime of this country';
-COMMENT ON COLUMN "ball"."economy" IS 'Economical regime of this country';
+COMMENT ON COLUMN "ball"."economy" IS 'Economy of which the country is in';
 COMMENT ON COLUMN "ball"."health" IS 'Ball health stat';
 COMMENT ON COLUMN "ball"."attack" IS 'Ball attack stat';
 COMMENT ON COLUMN "ball"."rarity" IS 'Rarity of this ball';
