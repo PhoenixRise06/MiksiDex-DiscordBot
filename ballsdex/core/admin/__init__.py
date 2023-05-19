@@ -2,7 +2,7 @@ from ballsdex.core.admin import resources, routes  # noqa: F401
 
 import os
 import pathlib
-from redis import asyncio as aioredis
+
 
 from tortoise.contrib.fastapi import register_tortoise
 
@@ -51,7 +51,7 @@ def init_fastapi_app() -> FastAPI:
 
     @app.on_event("startup")
     async def startup():
-        redis = asyncio.from_url(
+        redis = aioredis.from_url(
             os.environ.get("BALLSDEXBOT_REDIS_URL"), decode_responses=True, encoding="utf8"
         )
         await admin_app.configure(
