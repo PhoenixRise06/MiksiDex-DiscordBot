@@ -22,7 +22,7 @@ if TYPE_CHECKING:
 log = logging.getLogger("ballsdex.packages.admin.cog")
 
 
-@app_commands.guilds(settings.admin_guild_ids)
+@app_commands.guilds(*settings.admin_guild_ids)
 @app_commands.default_permissions(administrator=True)
 class Admin(commands.GroupCog):
     """
@@ -36,7 +36,7 @@ class Admin(commands.GroupCog):
     blacklist = app_commands.Group(name="blacklist", description="Bot blacklist management")
 
     @app_commands.command()
-    @app_commands.checks.has_any_role(settings.root_role_ids, settings.admin_role_ids)
+    @app_commands.checks.has_any_role(*settings.root_role_ids, settings.admin_role_ids)
     async def cooldown(
         self,
         interaction: discord.Interaction,
