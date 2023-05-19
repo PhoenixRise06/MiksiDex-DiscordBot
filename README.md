@@ -1,4 +1,4 @@
-# BallsDex Discord Bot
+# MiksiDex Discord Bot
 
 [![Discord server](https://discordapp.com/api/guilds/1049118743101452329/embed.png)](https://discord.gg/Qn2Rkdkxwc)
 [![Pre-commit](https://github.com/laggron42/BallsDex-DiscordBot/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/laggron42/BallsDex-DiscordBot/actions/workflows/pre-commit.yml)
@@ -9,19 +9,15 @@
 [![Black coding style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 [![Patreon](https://img.shields.io/badge/Patreon-donate-orange.svg)](https://patreon.com/retke)
 
-BallsDex is a bot for collecting countryballs on Discord and exchange them with your friends!
+MiksiDex is a bot used for collecting balls from Miksi XIII's series and members from the Legion of XIII server.
 
-You can invite the bot [here](https://discord.com/api/oauth2/authorize?client_id=999736048596816014&permissions=537193536&scope=bot%20applications.commands).
+You can invite the bot [here](https://discord.com/oauth2/authorize?client_id=1107110216715214889&permissions=2684734464&scope=bot).
 
 [![Discord server](https://discordapp.com/api/guilds/1049118743101452329/embed.png?style=banner3)](https://discord.gg/Qn2Rkdkxwc) [![Self-host server](https://discordapp.com/api/guilds/1078701108500897923/embed.png?style=banner3)](https://discord.gg/M4gVaRrRDe)
 
 ## Suggestions, questions and bug reports
 
-Feel free to ask any question on the Discord server above, we'll be here for discussing about your
-issue. If we estimate that your issue is important, you may be invited to post here instead (or
-we'll do it for you).
-
-You can directly post an issue in this repo, be sure to use the template!
+Feel free to ask questions in the questions-and-issues forum in the self-host server. If you don't feel like doing that, you can write a whole-ass email to miksidex.discordbot@gmail.com.
 
 ## Documentation
 

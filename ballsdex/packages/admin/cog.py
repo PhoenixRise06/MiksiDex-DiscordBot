@@ -36,7 +36,7 @@ class Admin(commands.GroupCog):
     blacklist = app_commands.Group(name="blacklist", description="Bot blacklist management")
 
     @app_commands.command()
-    @app_commands.checks.has_any_role(*settings.root_role_ids, *settings.admin_role_ids)
+    @app_commands.checks.has_any_role(*settings.root_role_ids, settings.admin_role_ids)
     async def cooldown(
         self,
         interaction: discord.Interaction,
@@ -162,7 +162,7 @@ class Admin(commands.GroupCog):
         await interaction.response.send_message(embed=embed)
 
     @app_commands.command()
-    @app_commands.checks.has_any_role(*settings.root_role_ids, *settings.admin_role_ids)
+    @app_commands.checks.has_any_role(settings.root_role_ids, settings.admin_role_ids)
     async def guilds(
         self,
         interaction: discord.Interaction,

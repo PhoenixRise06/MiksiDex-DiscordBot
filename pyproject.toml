@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "ballsdex"
-version = "1.0.0a1"
-description = ""
-authors = ["laggron42 <laggron42@gmail.com>"]
+name = "miksidex"
+version = "0.0.1"
+description = "Code legally stolen from BallsDex and customized for the Legion of XIII server"
+authors = ["laggron42 <laggron42@gmail.com>, phoenix <miksidex.discordbot@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]

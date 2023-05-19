@@ -51,7 +51,7 @@ def init_fastapi_app() -> FastAPI:
 
     @app.on_event("startup")
     async def startup():
-        redis = asyncio.from_url(
+        redis = aioredis.from_url(
             os.environ.get("BALLSDEXBOT_REDIS_URL"), decode_responses=True, encoding="utf8"
         )
         await admin_app.configure(
